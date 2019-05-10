@@ -23,13 +23,13 @@ class classroom_apply(models.Model):
 	classroom_apply_id = models.CharField(max_length=10,primary_key=True,null=False)	#申请单编号
 	applicant_id = models.CharField(max_length=10,null=False)		#申请人编号
 	classroom_id = models.CharField(max_length=20,null=True)		#教室编号
-	apply_date = models.DatetimeField(null=False)					#教室需要的日期时间
+	apply_date = models.DateTimeField(null=False)					#教室需要的日期时间
 	apply_reason = models.TextFeild(null=False)						#申请事由
 	apply_type = models.IntegerField(null=False)					#申请类别
 	edu_admin_id = models.CharField(max_length=10,null=True)		#第一审批人编号
 	head_id = models.CharField(max_length=10,null=True)				#第二审批人编号
 	apply_status = models.IntegerField(null=False,default=3)		#审批状态
-	apply_time = models.DatetimeField(auto_now_add=True)			#申请时间
+	apply_time = models.DateTimeField(auto_now_add=True)			#申请时间
 
 	class Meta:
 		db_table = "classroom_apply"
@@ -37,8 +37,7 @@ class classroom_apply(models.Model):
 
 class classroom_use_record(models.Model):
 	classroom_id = models.CharField(max_length=20,null=False)		#教室编号
-	use_time = models.DatetimeField(null=False)						#使用时间
+	use_time = models.DateTimeField(null=False)						#使用时间
 
 	class Meta:
 		db_table = "classroom_use_record"
-		
