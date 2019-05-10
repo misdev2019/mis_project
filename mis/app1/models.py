@@ -24,7 +24,7 @@ class classroom_apply(models.Model):
 	applicant_id = models.CharField(max_length=10,null=False)		#申请人编号
 	classroom_id = models.CharField(max_length=20,null=True)		#教室编号
 	apply_date = models.DateTimeField(null=False)					#教室需要的日期时间
-	apply_reason = models.TextFeild(null=False)						#申请事由
+	apply_reason = models.TextField(null=False)						#申请事由
 	apply_type = models.IntegerField(null=False)					#申请类别
 	edu_admin_id = models.CharField(max_length=10,null=True)		#第一审批人编号
 	head_id = models.CharField(max_length=10,null=True)				#第二审批人编号
