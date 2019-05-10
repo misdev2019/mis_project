@@ -41,3 +41,4 @@ class classroom_use_record(models.Model):
 
 	class Meta:
 		db_table = "classroom_use_record"
+		unique_together = ("classroom_id","use_time",)
