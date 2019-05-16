@@ -70,7 +70,6 @@ class classroom_apply_finished(models.Model):
 	edu_admin_id = models.CharField(max_length=10,null=True)				#第一审批人编号
 	head_id = models.CharField(max_length=10,null=True)					#第二审批人编号
 	
-
 	class Meta:
 		db_table = "classroom_apply_finished"
 		ordering = ['apply_date']
@@ -85,15 +84,7 @@ class course_classroom(models.Model):
 		db_table = "course_classroom"
 		unique_together = ("classroom_id","use_date","use_section")
 
-#8.字典变量
-class status_code_directory(models.Model):
-	status_code = models.IntegerField(max_length=5, null=False)   				#状态代码
-	status_meaning = models.CharField(max_length=20, null=False)  				#状态解释
-	status_type = models.CharField(max_length=5, null=False)    		  		#状态所属类别
 
-	class Meta:
-		db_table = "status_code_irectory"
-		unique_together = ("status_code", "status_type")
 
 
 
