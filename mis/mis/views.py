@@ -7,6 +7,9 @@ def index(request):
 	return render(request,'login.html',{})
 
 def login(request):
+
+	username = request.POST.get("username",None)
+	password = request.POST.get("password",None)	
 	user = auth.authenticate(username=username,password=password)
 	if user is None:
 		return JsonResponse({
