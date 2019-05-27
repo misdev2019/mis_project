@@ -1,0 +1,180 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="">
+	<title>Home</title>
+	<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/devicons.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/simple-line-icons.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style_process.css' %}" rel="stylesheet">
+	<link href="{% static 'css/resume.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style_other.css' %}"></link>
+	<link href="{% static 'css/default.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+	<script type="text/javascript" src="{% static 'js/jquery1.42.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
+	<script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'js/resume.min.js' %}"></script>
+	<script src="{% static 'js/jquery-progress.js' %}" type="text/javascript"></script>
+	<style>
+        #table_wrap > table {
+            font-size: 16px;
+            text-align: center;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px;
+        }
+		table  tr th{
+		font-weight:300; 
+		font-size:16px;
+		border-top: 2px solid #bd5d38;
+        
+		}
+        table thead tr,table tbody tr {
+       		font-weight:300; 
+			font-size:12px
+            height: 50px;
+            line-height: 50px;
+            
+            /*background-color: pink;*/
+        }
+        table tr th:first-child,table tr td:first-child {/*设置table左边边框*/
+        	
+            border-left: 2px solid #bd5d38;
+        }
+        table tr th:last-child,table tr td:last-child {/*设置table右边边框*/
+      		
+            border-right: 2px solid #bd5d38;
+        }
+        
+        table tr th {
+        border-top: 2px solid #bd5d38;
+        }
+        table tr:first-child th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        table tr:first-child th:last-child {
+            border-top-right-radius: 12px;
+        }
+        table tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+
+        table tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
+        table tr td:first-child,
+        table tr td:nth-child(2),
+        table tr td:nth-child(3),
+        table tr td:last-child{/*设置table表格每列底部边框*/
+        	
+            border-bottom: 2px solid #bd5d38;
+        }
+        table tr th:first-child,
+        table tr th:nth-child(2),
+        table tr th:nth-child(3),
+        table tr th:last-child{/*设置table表格每列底部边框*/
+        	border-top: 2px solid #bd5d38;
+            
+        }
+		
+	</style>
+</head>
+
+<body id="page-top">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+		<a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<span class="d-block d-lg-none">Start Bootstrap</span>
+			<span class="d-none d-lg-block">
+	  			<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/profile.jpg' %}" alt="">
+			</span>
+  		</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+	  			<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">个人中心</a></li>
+	  			<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">通告信息</a></li>
+	  			<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">课室申请</a></li>
+	  			<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">故障处理</a></li>
+	  			<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">空闲教室查询</a></li>
+			</ul>
+  		</div>
+	</nav>
+
+	<div id='main'>
+		<div id="featured">
+			<div class="title">
+				<h2><center>课室申请</center></h2>
+			</div>
+			<br><br><br><br><br>
+			<div id="table_wrap">
+   				<table class="table" width="600" cellspacing="0" cellpadding="0" >
+       				<thead class="table_head">
+        	  			<tr>
+         		    		<th>申请编号</th>
+            				<th>课室规模</th>
+            				<th>使用时间</th>
+            				<th>教室编号</th>
+       			 		</tr>
+        			</thead>
+      		    	<tbody>
+        				<tr>
+           					<td>id</td>
+            				<td>scale</td>
+            				<td>time</td>
+            				<td>class_id（若无返回空）</td>
+        				</tr>
+        			</tbody>
+    			</table>
+			</div>
+			<br><br><br><br><br>
+			
+			<div id="step">
+				<div class="step-wrap">
+					<div class="step-bg"></div>
+					<div class="step-progress"></div>
+					<ul class="step">
+						<li class="step-item active">
+							<div class="setp-item-num"><span>1</span></div>
+							<div class="setp-item-title">填写申请</div>
+						</li>
+						<li class="step-item">
+							<div class="setp-item-num"><span>2</span></div>
+							<div class="setp-item-title">负责人审核</div>
+						</li>
+						<li class="step-item">
+							<div class="setp-item-num"><span>3</span></div>
+							<div class="setp-item-title">教务部审核</div>
+						</li>
+						<li class="step-item">
+							<div class="setp-item-num"><span>4</span></div>
+							<div class="setp-item-title">申请人确认</div>
+						</li>
+						<li class="step-item">
+							<div class="setp-item-num"><span>5</span></div>
+							<div class="setp-item-title">办结</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

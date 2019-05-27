@@ -1,0 +1,84 @@
+#step .step-wrap {
+    width: 100%;
+    position:relative;
+	justify-content:center;
+}
+#step .step-bg {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: lightgrey;
+}
+#step .step-progress {
+    width: 20%;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #bd5d38;
+}
+
+#step .step {
+    display: inline-block;
+}
+#step .step-item {
+    width: 20%;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+#step .step-item .setp-item-title {
+    font-size: 20px;
+    text-align: center;
+	font-family: 'Saira Extra Condensed', serif;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+#step .step-item.active .setp-item-num {
+    background-color: #bd5d38;
+	
+}
+span{
+	color: white;
+}
+#step .step .step-item .setp-item-num {
+    line-height: 30px;
+    margin-left: 44%;
+}
+#step .step .step-item:nth-child(1) {
+    left: 0;
+} 
+#step .step .step-item:nth-child(2) {
+    left: 20%;
+}
+#step .step .step-item:nth-child(3) {
+    left: 40%;
+}
+#step .step .step-item:nth-child(4) {
+    left: 60%;
+}
+#step .step .step-item:nth-child(5) {
+    left: 80%;
+}
+#step .step .setp-item-num {
+    width: 30px;
+    height: 30px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    text-align: center;
+    padding: 3px;
+}
+.step-next {
+	width: 200px;
+	margin: 40px auto;
+}
+#nextStep {
+	display: block;
+	height: 30px;
+	width: 100%;
+}
