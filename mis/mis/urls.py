@@ -17,9 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.index,name="index"),
     path("login/",views.login,name="login"),
-    path("homepage/",views.homepage,name="homepage")
+    path("homepage/",views.homepage,name="homepage"),
+    path("signup/", views.signup, name = "signup"),
+    path("active/<str:active_code>/", views.active, name="active"),
+    path("reset_password/", views.reset_password, name="reset_password"),
+    path("confirm_reset/<str:active_code>/", views.confirm_reset, name="confirm_reset")
 ]
