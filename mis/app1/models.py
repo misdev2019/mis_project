@@ -84,6 +84,16 @@ class course_classroom(models.Model):
 		db_table = "course_classroom"
 		unique_together = ("classroom_id","use_date","use_section")
 
+#8.邮箱验证表
+class EmailVerifyRecord(models.Model):
+	code = models.CharField(max_length=20,null=False,primary_key = True)
+	email = models.CharField(max_length=30,null=False)
+	send_type = models.CharField(null=False, max_length=50)
+	send_time = models.DateField(null=False, auto_now=True)
+
+	class Meta:
+		db_table = "EmailVerifyRecord"
+
 
 
 
